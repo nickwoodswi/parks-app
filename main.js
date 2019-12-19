@@ -6,7 +6,6 @@ function addStates() {
         let selectedState = $('#states option:selected').text();
         let selectedCode = $('#states option:selected').val();
         let selectionStatus = statesToSearch.includes(`stateCode=${selectedCode}`);
-        console.log(statesToSearch);
         if (selectionStatus == false) {
             $('.statesToSearch').append(`<li>${selectedState}</li>`);
             statesToSearch.push(`stateCode=${selectedCode}`);
@@ -20,7 +19,6 @@ function clearResults() {
         $('.statesToSearch').empty();
         $('.results').empty();
         statesToSearch.length = 0;
-        console.log(statesToSearch);
     });
 };
 
