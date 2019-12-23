@@ -1,3 +1,5 @@
+'use strict'
+
 let statesToSearch = [];
 let maxResults = 10;
 
@@ -40,7 +42,7 @@ function searchStates() {
 
 function buildParks(responseJson) {
     let parksData = (responseJson.data);
-    for (i = 0; i < parksData.length; i++) {
+    for (let i = 0; i < parksData.length; i++) {
         $('.results').append(
             `<h2>${parksData[i].fullName}</h2><br>
             <a href="${parksData[i].url}">${parksData[i].url}</a>
